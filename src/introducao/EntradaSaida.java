@@ -30,6 +30,8 @@ public class EntradaSaida {
 	System.out.println("Bom dia, Magnata " + nome);	// concatenação
 
 	System.out.printf("A temperatura em Fahrenheit é %.1f", fahrenheit);	
+	
+	leia.close();
 
 	}
 
