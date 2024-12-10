@@ -1,30 +1,33 @@
 package metodos;
 
+import java.util.Scanner;
+
 public class ExemploMetodos {
 
 	public static void main(String[] args) {
 		
-		int resultado = somar(2,5);
+		float numero1 = 0, numero2 = 0;
+		Scanner leia = new Scanner (System.in);
 		
-		System.out.println("O primeiro resultado é: " + resultado);
-		System.out.println("O segundo resultado é " + somar(3,4));
+		System.out.println("Insira o primeiro número do cálculo: ");
+		numero1 = leia.nextFloat();
 		
-		falar("Pode ser, bom dia!");
-		falar ("O gato dourado!");
+		System.out.println("Insira o segundo número do cálculo: ");
+		numero2 = leia.nextFloat();
 		
-		ExemploMetodoExterno.mensagem();
+		
+		System.out.println("O resultado da soma é: " +Calculadora.soma(numero1, numero2));
+		
+		System.out.println("O resultado da soma é: " +Calculadora.subtracao(numero1, numero2));
+		
+		System.out.println("O resultado da soma é: " +Calculadora.divisao(numero1, numero2));
+		
+		System.out.println("O resultado da soma é: " +Calculadora.multiplicacao(numero1, numero2));
+		
+		leia.close();
 		
 	}
 	
-	// Definição do Método Somar - Método com retorno e com Parametro
-	public static int somar(int n1, int n2) {
-		return n1 + n2;
-		
-	}
-	// Definição do Método falar - Método sem retorno e com parametro
-	public static void falar(String mensagem) {
-		System.out.println(mensagem);
-		
-	}
+
 
 }
